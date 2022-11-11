@@ -15,6 +15,14 @@ public class Player_Movement : MonoBehaviour
 
     public GameObject purple;
 
+    public GameObject pink;
+
+    public delegate void MultiDelegate();
+    public MultiDelegate myMultiDelegate;
+
+
+    
+
     public int number;
     private Animator anim;
     private bool dead;
@@ -66,11 +74,8 @@ public class Player_Movement : MonoBehaviour
                 {
                     SpawnObjectpurple();
                 }
-               
-                
+                  
                 Destroy(collision.gameObject);
-
-
 
                 break;
             case "red":
@@ -80,6 +85,17 @@ public class Player_Movement : MonoBehaviour
             case "purple":
                 anim.SetTrigger("die");
                 enabled = false;
+                break;
+
+            case "pink":
+
+                if (myMultiDelegate != null)
+                {
+                    myMultiDelegate();
+                }
+                
+
+                Destroy(collision.gameObject);
                 break;
 
         }
@@ -114,5 +130,6 @@ public class Player_Movement : MonoBehaviour
         Vector2 spawnPosition = new Vector2(spawnX, spawnY);
         Instantiate(purple, spawnPosition, Quaternion.identity);
     }
-  
+
+    
 }

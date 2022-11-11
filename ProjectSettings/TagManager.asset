@@ -9,6 +9,7 @@ TagManager:
   - red
   - purple
   - wall
+  - pink
   layers:
   - Default
   - TransparentFX
