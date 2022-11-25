@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-public class CD : MonoBehaviour
+public class CD1 : MonoBehaviour
 {
     bool loadingStarted = false;
     float secondsLeft = 0;
-    public GameObject text ;
+    public GameObject text;
 
     void Start()
     {
@@ -23,7 +23,8 @@ public class CD : MonoBehaviour
         } while (--secondsLeft > 0);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        DontDestroyOnLoad(text);
+        DestroyObject(text);
+       
     }
 
     void OnGUI()

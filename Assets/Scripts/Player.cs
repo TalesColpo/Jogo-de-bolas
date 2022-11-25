@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public float speed = 2;
+
     private float horizontal;
+
     private float vertical;
+
     private Rigidbody2D rb;
   
     public GameObject circle;
@@ -19,6 +22,7 @@ public class Player : MonoBehaviour
     public GameObject pink;
 
     public delegate void MultiDelegate();
+
     public MultiDelegate myMultiDelegate;
 
 
@@ -44,8 +48,9 @@ public class Player : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+        
 
-    }
+        }
 
     private void FixedUpdate()
     {
@@ -82,8 +87,9 @@ public class Player : MonoBehaviour
             case "red":
                 anim.SetTrigger("die");
                 enabled = false;
+               
 
-                SceneManager.LoadScene("GameOver");
+               
 
                 break;
             case "purple":
@@ -107,6 +113,8 @@ public class Player : MonoBehaviour
 
         }
     }
+        
+
 
     private void SpawnObjects()
     {
@@ -137,6 +145,10 @@ public class Player : MonoBehaviour
         Vector2 spawnPosition = new Vector2(spawnX, spawnY);
         Instantiate(purple, spawnPosition, Quaternion.identity);
     }
+    private void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
 
-    
+
 }

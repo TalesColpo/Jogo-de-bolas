@@ -26,8 +26,9 @@ public class Score : MonoBehaviour
         {
             PlayerPrefs.SetInt("highscore", scoreAmount);
         }
-
+        
     }
+   
     
       
 

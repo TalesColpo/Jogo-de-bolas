@@ -191,7 +191,6 @@ GameObject:
   - component: {fileID: 386768333}
   - component: {fileID: 386768332}
   - component: {fileID: 386768331}
-  - component: {fileID: 386768334}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -264,18 +263,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &386768334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386768330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8326b28e6c38ae44bb205e482bbdfae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &444249323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -393,6 +380,7 @@ MonoBehaviour:
   circle: {fileID: 2351987547573248965, guid: cbfc15fe1c6d1be439629ae960857a1a, type: 3}
   circlered: {fileID: 1750784897295686085, guid: 3e7ea2d64fb5a7d4da1e10fb5735abfa, type: 3}
   purple: {fileID: 3945774794220249496, guid: be1109cf70cba8e449ddfc066ab66ca2, type: 3}
+  pink: {fileID: 0}
   number: 0
 --- !u!50 &887047157
 Rigidbody2D:
