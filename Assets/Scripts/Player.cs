@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Player_Movement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float speed = 2;
     private float horizontal;
     private float vertical;
     private Rigidbody2D rb;
-
+  
     public GameObject circle;
 
     public GameObject circlered;
@@ -81,10 +82,16 @@ public class Player_Movement : MonoBehaviour
             case "red":
                 anim.SetTrigger("die");
                 enabled = false;
+
+                SceneManager.LoadScene("GameOver");
+
                 break;
             case "purple":
                 anim.SetTrigger("die");
                 enabled = false;
+
+                SceneManager.LoadScene("GameOver");
+
                 break;
 
             case "pink":

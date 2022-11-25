@@ -7,11 +7,11 @@ public class Ball_Movement : MonoBehaviour
     Rigidbody2D rb;
     private float speed = 400;
 
-    Player_Movement player;
+    Player player;
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<Player_Movement>();
+        player = FindObjectOfType<Player>();
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2(20*Time.deltaTime*speed, 20 * Time.deltaTime * speed));
 

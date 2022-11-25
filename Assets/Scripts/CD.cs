@@ -8,7 +8,7 @@ public class CD : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(DelayLoadLevel(30));
+        StartCoroutine(DelayLoadLevel(10));
         
     }
 
@@ -28,5 +28,9 @@ public class CD : MonoBehaviour
     {
         if (loadingStarted)
             GUI.Label(new Rect(0, 0, 100, 20), secondsLeft.ToString());
+    }
+    public static void EndScreen()
+    {
+
     }
 }

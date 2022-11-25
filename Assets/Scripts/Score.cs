@@ -9,14 +9,8 @@ public class Score : MonoBehaviour
     public static int scoreAmount;
     private Text scoreText;
 
-    public Canvas c;
-
     //this game object will not get destroyed between scene loading
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(c);
-    }
+
     void Start()
     {
         scoreText = GetComponent<Text>();
@@ -27,6 +21,15 @@ public class Score : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score:" + scoreAmount;
-       
+
+        if (scoreAmount > PlayerPrefs.GetInt("highscore"))
+        {
+            PlayerPrefs.SetInt("highscore", scoreAmount);
+        }
+
     }
+    
+      
+
+    
 }

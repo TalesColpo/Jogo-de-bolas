@@ -19,16 +19,16 @@ public class purple_track : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var target = GameObject.FindGameObjectWithTag("Player").transform;
-
-        var speed = LastVelocity.magnitude;
-        var direction = Vector3.Reflect(LastVelocity.normalized, collision.contacts[0].normal);
-        rb.velocity = direction * Mathf.Max(speed, 0f);
 
         switch (collision.gameObject.tag)
         {
             case "wall":
 
+        var target = GameObject.FindGameObjectWithTag("Player").transform;
+
+        var speed = LastVelocity.magnitude;
+        var direction = Vector3.Reflect(LastVelocity.normalized, collision.contacts[0].normal);
+        rb.velocity = direction * Mathf.Max(speed, 0f);
                 rb.velocity = new Vector2((target.position.x - rb.position.x), (target.position.y - rb.position.y));
 
 
