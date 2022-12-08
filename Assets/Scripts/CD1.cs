@@ -5,7 +5,7 @@ public class CD1 : MonoBehaviour
 {
     bool loadingStarted = false;
     float secondsLeft = 0;
-    public GameObject text;
+    
 
     void Start()
     {
@@ -23,14 +23,14 @@ public class CD1 : MonoBehaviour
         } while (--secondsLeft > 0);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        DestroyObject(text);
+
        
     }
 
     void OnGUI()
     {
         if (loadingStarted)
-            GUI.Label(new Rect(0, 0, 100, 20), secondsLeft.ToString());
+            GUI.Label(new Rect(0, 0, 0, 20), secondsLeft.ToString());
     }
 
 }

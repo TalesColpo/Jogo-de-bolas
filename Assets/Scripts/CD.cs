@@ -29,7 +29,7 @@ public class CD : MonoBehaviour
     void OnGUI()
     {
         if (loadingStarted)
-            GUI.Label(new Rect(0, 0, 100, 20), secondsLeft.ToString());
+            GUI.Label(new Rect(0, 0, 0, 20), secondsLeft.ToString());
     }
 
 }

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Score : MonoBehaviour
 {
     public static int scoreAmount;
-    private Text scoreText;
+    public Text scoreText;
 
     //this game object will not get destroyed between scene loading
 
@@ -26,6 +26,8 @@ public class Score : MonoBehaviour
         {
             PlayerPrefs.SetInt("highscore", scoreAmount);
         }
+
+ 
         
     }
    

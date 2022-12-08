@@ -106,9 +106,8 @@ public class Player : MonoBehaviour
                 {
                     myMultiDelegate();
                 }
-                
-
                 Destroy(collision.gameObject);
+
                 break;
 
         }

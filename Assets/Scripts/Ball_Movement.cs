@@ -19,20 +19,25 @@ public class Ball_Movement : MonoBehaviour
 
        
     }
-   
+
+    void OnDestroy()
+    {
+        player.myMultiDelegate -= reduce;
+    }
+
     public void reduce()
     {
-        if(gameObject.tag == "red")
+        if(gameObject.tag == "red" || gameObject.tag == "purple")
         {
             transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             Invoke("recover", 4);
-        }
+        } 
 
     }
 
     public void recover()
     {
-        if (gameObject.tag == "red")
+        if (gameObject.tag == "red" || gameObject.tag == "purple")
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
