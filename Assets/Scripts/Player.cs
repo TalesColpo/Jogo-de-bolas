@@ -58,8 +58,8 @@ public class Player : MonoBehaviour
         pos.x = pos.x + horizontal * speed * Time.deltaTime;
         pos.y = pos.y + vertical * speed * Time.deltaTime;
         rb.MovePosition(pos);
-        anim.SetBool("Ultra_run", horizontal !=0);
-        anim.SetBool("Ultra_run", vertical != 0);
+        anim.SetBool("UltraRun", horizontal !=0);
+        anim.SetBool("UltraRun", vertical != 0);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
