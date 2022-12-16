@@ -24,6 +24,7 @@ public class CD : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         DontDestroyOnLoad(text);
+       
     }
 
     void OnGUI()
